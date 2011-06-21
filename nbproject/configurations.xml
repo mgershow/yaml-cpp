@@ -80,7 +80,7 @@
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="Debug" type="2">
+    <conf name="Debug" type="3">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <compilerSet>MinGW|MinGW</compilerSet>
@@ -94,6 +94,9 @@
             <pElem>include/yaml-cpp/contrib</pElem>
           </incDir>
         </ccTool>
+        <archiverTool>
+          <output>./libyaml-cpp.lib</output>
+        </archiverTool>
       </compileType>
     </conf>
     <conf name="Release" type="2">
