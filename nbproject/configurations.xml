@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="69">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true"
+                   kind="SOURCE_LOGICAL_FOLDER">
+      <itemPath>src/collectionstack.h</itemPath>
+      <itemPath>src/directives.h</itemPath>
+      <itemPath>src/emitterstate.h</itemPath>
+      <itemPath>src/emitterutils.h</itemPath>
+      <itemPath>src/exp.h</itemPath>
+      <itemPath>src/contrib/graphbuilderadapter.h</itemPath>
+      <itemPath>src/indentation.h</itemPath>
+      <itemPath>src/iterpriv.h</itemPath>
+      <itemPath>src/nodebuilder.h</itemPath>
+      <itemPath>src/nodeownership.h</itemPath>
+      <itemPath>src/ptr_stack.h</itemPath>
+      <itemPath>src/ptr_vector.h</itemPath>
+      <itemPath>src/regex.h</itemPath>
+      <itemPath>src/regeximpl.h</itemPath>
+      <itemPath>src/scanner.h</itemPath>
+      <itemPath>src/scanscalar.h</itemPath>
+      <itemPath>src/scantag.h</itemPath>
+      <itemPath>src/setting.h</itemPath>
+      <itemPath>src/singledocparser.h</itemPath>
+      <itemPath>src/stream.h</itemPath>
+      <itemPath>src/streamcharsource.h</itemPath>
+      <itemPath>src/stringsource.h</itemPath>
+      <itemPath>src/tag.h</itemPath>
+      <itemPath>src/token.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true"
+                   kind="SOURCE_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true"
+                   kind="SOURCE_LOGICAL_FOLDER">
+      <itemPath>src/aliasmanager.cpp</itemPath>
+      <itemPath>src/conversion.cpp</itemPath>
+      <itemPath>src/directives.cpp</itemPath>
+      <itemPath>src/emitfromevents.cpp</itemPath>
+      <itemPath>src/emitter.cpp</itemPath>
+      <itemPath>src/emitterstate.cpp</itemPath>
+      <itemPath>src/emitterutils.cpp</itemPath>
+      <itemPath>src/exp.cpp</itemPath>
+      <itemPath>src/contrib/graphbuilder.cpp</itemPath>
+      <itemPath>src/contrib/graphbuilderadapter.cpp</itemPath>
+      <itemPath>src/iterator.cpp</itemPath>
+      <itemPath>src/node.cpp</itemPath>
+      <itemPath>src/nodebuilder.cpp</itemPath>
+      <itemPath>src/nodeownership.cpp</itemPath>
+      <itemPath>src/null.cpp</itemPath>
+      <itemPath>src/ostream.cpp</itemPath>
+      <itemPath>src/parser.cpp</itemPath>
+      <itemPath>src/regex.cpp</itemPath>
+      <itemPath>src/scanner.cpp</itemPath>
+      <itemPath>src/scanscalar.cpp</itemPath>
+      <itemPath>src/scantag.cpp</itemPath>
+      <itemPath>src/scantoken.cpp</itemPath>
+      <itemPath>src/simplekey.cpp</itemPath>
+      <itemPath>src/singledocparser.cpp</itemPath>
+      <itemPath>src/stream.cpp</itemPath>
+      <itemPath>src/tag.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>MinGW|MinGW</compilerSet>
+        <platform>3</platform>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/yaml-cpp</pElem>
+            <pElem>include/yaml-cpp/contrib</pElem>
+          </incDir>
+        </ccTool>
+      </compileType>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>MinGW|MinGW</compilerSet>
+        <platform>3</platform>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+    </conf>
+  </confs>
+</configurationDescriptor>
