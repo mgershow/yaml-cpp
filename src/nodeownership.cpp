@@ -1,5 +1,6 @@
 #include "nodeownership.h"
 #include "yaml-cpp/node.h"
+#include <cstddef>
 
 namespace YAML
 {
