@@ -4,9 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>include/yaml-cpp/binary.h</itemPath>
       <itemPath>src/collectionstack.h</itemPath>
       <itemPath>src/directives.h</itemPath>
       <itemPath>src/emitterstate.h</itemPath>
+      <itemPath>test/emittertests.h</itemPath>
       <itemPath>src/emitterutils.h</itemPath>
       <itemPath>src/exp.h</itemPath>
       <itemPath>src/contrib/graphbuilderadapter.h</itemPath>
@@ -14,6 +16,8 @@
       <itemPath>src/iterpriv.h</itemPath>
       <itemPath>src/nodebuilder.h</itemPath>
       <itemPath>src/nodeownership.h</itemPath>
+      <itemPath>test/nodetests.h</itemPath>
+      <itemPath>test/parsertests.h</itemPath>
       <itemPath>src/ptr_stack.h</itemPath>
       <itemPath>src/ptr_vector.h</itemPath>
       <itemPath>src/regex.h</itemPath>
@@ -23,10 +27,13 @@
       <itemPath>src/scantag.h</itemPath>
       <itemPath>src/setting.h</itemPath>
       <itemPath>src/singledocparser.h</itemPath>
+      <itemPath>test/specexamples.h</itemPath>
+      <itemPath>test/spectests.h</itemPath>
       <itemPath>src/stream.h</itemPath>
       <itemPath>src/streamcharsource.h</itemPath>
       <itemPath>src/stringsource.h</itemPath>
       <itemPath>src/tag.h</itemPath>
+      <itemPath>test/tests.h</itemPath>
       <itemPath>src/token.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -36,7 +43,22 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="src" displayName="src" projectFiles="true">
+        <logicalFolder name="contrib" displayName="contrib" projectFiles="true">
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="test" displayName="test" projectFiles="true">
+        <logicalFolder name="old-api" displayName="old-api" projectFiles="true">
+        </logicalFolder>
+        <itemPath>test/CMakeLists.txt</itemPath>
+        <itemPath>test/emittertests.cpp</itemPath>
+        <itemPath>test/main.cpp</itemPath>
+        <itemPath>test/parsertests.cpp</itemPath>
+        <itemPath>test/spectests.cpp</itemPath>
+        <itemPath>test/tests.cpp</itemPath>
+      </logicalFolder>
       <itemPath>src/aliasmanager.cpp</itemPath>
+      <itemPath>src/binary.cpp</itemPath>
       <itemPath>src/conversion.cpp</itemPath>
       <itemPath>src/directives.cpp</itemPath>
       <itemPath>src/emitfromevents.cpp</itemPath>
@@ -75,6 +97,10 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>src</Elem>
+    <Elem>test</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Windows" type="3">
@@ -88,6 +114,7 @@
             <pElem>include</pElem>
             <pElem>include/yaml-cpp</pElem>
             <pElem>include/yaml-cpp/contrib</pElem>
+            <pElem>test</pElem>
           </incDir>
         </ccTool>
         <archiverTool>

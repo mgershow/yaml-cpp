@@ -23,7 +23,6 @@ namespace YAML
 		bool emptyLine = false, moreIndented = false;
 		int foldedNewlineCount = 0;
 		bool foldedNewlineStartedMoreIndented = false;
-        std::size_t lastEscapedChar = std::string::npos;
 		std::string scalar;
 		params.leadingSpaces = false;
 
@@ -53,7 +52,6 @@ namespace YAML
 					// eat escape character and get out (but preserve trailing whitespace!)
 					INPUT.get();
 					lastNonWhitespaceChar = scalar.size();
-                    lastEscapedChar = scalar.size();
 					escapedNewline = true;
 					break;
 				}
@@ -62,7 +60,6 @@ namespace YAML
 				if(INPUT.peek() == params.escape) {
 					scalar += Exp::Escape(INPUT);
 					lastNonWhitespaceChar = scalar.size();
-                    lastEscapedChar = scalar.size();
 					continue;
 				}
 
@@ -174,32 +171,20 @@ namespace YAML
 		// post-processing
 		if(params.trimTrailingSpaces) {
 			std::size_t pos = scalar.find_last_not_of(' ');
-            if(lastEscapedChar != std::string::npos) {
-                if(pos < lastEscapedChar || pos == std::string::npos)
-                    pos = lastEscapedChar;
-            }
 			if(pos < scalar.size())
 				scalar.erase(pos + 1);
 		}
 
 		switch(params.chomp) {
 			case CLIP: {
-				std::size_t pos = scalar.find_last_not_of('\n');
-                if(lastEscapedChar != std::string::npos) {
-                    if(pos < lastEscapedChar || pos == std::string::npos)
-                        pos = lastEscapedChar;
-                }
+				const std::size_t pos = scalar.find_last_not_of('\n');
 				if(pos == std::string::npos)
 					scalar.erase();
 				else if(pos + 1 < scalar.size())
 					scalar.erase(pos + 2);
 			} break;
 			case STRIP: {
-				std::size_t pos = scalar.find_last_not_of('\n');
-                if(lastEscapedChar != std::string::npos) {
-                    if(pos < lastEscapedChar || pos == std::string::npos)
-                        pos = lastEscapedChar;
-                }
+				const std::size_t pos = scalar.find_last_not_of('\n');
 				if(pos == std::string::npos)
 					scalar.erase();
 				else if(pos < scalar.size())
