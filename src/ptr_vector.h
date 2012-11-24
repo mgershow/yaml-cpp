@@ -8,7 +8,8 @@
 #include "yaml-cpp/noncopyable.h"
 #include <memory>
 #include <vector>
-
+#include <cstddef>
+#include <cstdlib>
 namespace YAML {
 	
 	template <typename T>

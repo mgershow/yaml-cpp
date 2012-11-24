@@ -10,6 +10,7 @@
 #include "yaml-cpp/eventhandler.h"
 #include "yaml-cpp/contrib/anchordict.h"
 #include "yaml-cpp/contrib/graphbuilder.h"
+#include <cstddef>
 
 namespace YAML
 {

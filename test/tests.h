@@ -6,6 +6,7 @@
 #endif
 
 #include <string>
+#include <cstddef>
 
 namespace Test {
 	void RunAll();

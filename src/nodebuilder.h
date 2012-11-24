@@ -10,6 +10,7 @@
 #include <memory>
 #include <stack>
 #include <vector>
+#include <cstddef>
 
 namespace YAML
 {
