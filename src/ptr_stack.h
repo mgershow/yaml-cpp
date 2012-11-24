@@ -10,6 +10,7 @@
 #include <cstdlib>
 #include <memory>
 #include <vector>
+#include <cstddef>
 
 template <typename T>
 class ptr_stack: private YAML::noncopyable

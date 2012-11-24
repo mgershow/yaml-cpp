@@ -10,6 +10,7 @@
 #include <cstdlib>
 #include <memory>
 #include <vector>
+#include <cstddef>
 
 namespace YAML {
 	

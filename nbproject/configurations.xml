@@ -115,5 +115,23 @@
         </asmTool>
       </compileType>
     </conf>
+    <conf name="Linux" type="3">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/yaml-cpp</pElem>
+            <pElem>include/yaml-cpp/contrib</pElem>
+          </incDir>
+        </ccTool>
+        <archiverTool>
+          <output>./LinuxBinaries/libyaml-cpp.lib</output>
+        </archiverTool>
+      </compileType>
+    </conf>
   </confs>
 </configurationDescriptor>
