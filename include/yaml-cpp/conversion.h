@@ -50,25 +50,29 @@ namespace YAML
 	inline bool Convert(const std::string& input, T& output, typename enable_if<is_numeric<T> >::type * = 0) {
 		std::stringstream stream(input);
 		stream.unsetf(std::ios::dec);
-        if((stream >> output) && (stream >> std::ws).eof())
-            return true;
-		
-		if(std::numeric_limits<T>::has_infinity) {
-			if(IsInfinity(input)) {
-				output = std::numeric_limits<T>::infinity();
-				return true;
-			} else if(IsNegativeInfinity(input)) {
-				output = -std::numeric_limits<T>::infinity();
-				return true;
-			}
-		}
-		
-		if(std::numeric_limits<T>::has_quiet_NaN && IsNaN(input)) {
-			output = std::numeric_limits<T>::quiet_NaN();
-			return true;
-		}
-		
-		return false;
+                //restored this code from earlier version to avoid error parsing double to int; will fix more robustly later
+                //MHG 11-24-2012 - TODO FIX
+                stream >> output;
+		return !!stream;
+//        if((stream >> output) && (stream >> std::ws).eof())
+//            return true;
+//		
+//		if(std::numeric_limits<T>::has_infinity) {
+//			if(IsInfinity(input)) {
+//				output = std::numeric_limits<T>::infinity();
+//				return true;
+//			} else if(IsNegativeInfinity(input)) {
+//				output = -std::numeric_limits<T>::infinity();
+//				return true;
+//			}
+//		}
+//		
+//		if(std::numeric_limits<T>::has_quiet_NaN && IsNaN(input)) {
+//			output = std::numeric_limits<T>::quiet_NaN();
+//			return true;
+//		}
+//		
+//		return false;
 	}
 }
 
